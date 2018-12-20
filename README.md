@@ -9,6 +9,7 @@ For a successful and ultimately useful tool, I will have a few primary goals/fea
  - Additionally, host a wide set of overlays for the map including champion pathing and kills/deaths/assists markers; aggregation overlays to show most warded and visited locations or most useful- or not- wards; and filters to only show data for other champions, for only champion vision and not ward vision, or by ward type. Anything that can be asked or analyzed regarding match vision, I want to be able to visualize that.
  - For single-match analyses, allow the Map Tool to scrub through the match or play the entire match to view frame-by-frame changes in vision and ward placement across both teams.
  - For multi-match analyses, have a collection of useful aggregate functions and overlays to show progression toward improved (or worsened) Vision Score.
+ - Post-match tips and running aggregate tips and comments to lead players to improved Vision Scores and better match performances.
  - And of course, an in-depth and educational wiki so that Summoners can understand how these
  
 After these initial, primary goals are met, there are a few secondary goals/features that I would like to achieve/implement:
