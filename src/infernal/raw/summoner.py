@@ -1,7 +1,7 @@
 class Summoner(object):
 
 	@classmethod
-	def get_summoner_by_account(cls, session, account_id, params={}):
+	def get_summoner_by_account_id(cls, session, account_id, params={}):
 		pass
 
 	@classmethod
@@ -13,5 +13,5 @@ class Summoner(object):
 		pass
 
 	@classmethod
-	def get_summoner_by_summoner(cls, session, summoner_id, params={}):
+	def get_summoner_by_summoner_id(cls, session, summoner_id, params={}):
 		pass

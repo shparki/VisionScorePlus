@@ -1,4 +1,4 @@
-from . import contants as const
+from . import constants as const
 from .infernal_error  import RequestError, RateError
 from .utils import default_dict
 
@@ -37,29 +37,12 @@ class Session(object):
 		self.uid = datetime.datetime.today().strftime('%y%m%d_%H%M%S')
 		self.name = name
 		if self.name is None:
-			self.name = self.uid
-
-		cwd = str(os.getcwd())
-		self.encl_dirpath = '{}/sessions'.format(cwd)
-		if not os.path.exists(self.encl_dirpath):
-			os.mkdir(self.encl_dirpath)
-
-		self.parent_dirpath = '{}/{}'.format(self.encl_dirpath, self.name)
-		if not os.path.exists(self.parent_dirpath):
-			os.mkdir(self.parent_dirpath)
-
-		self.data_dirpath = '{}/data'.format(self.parent_dirpath, self.name)
-		if not os.path.exists(self.data_dirpath):
-			os.mkdir(self.data_dirpath)
-
-		self.logs_dirpath = '{}/logs'.format(self.parent_dirpath, self.name)
-		if not os.path.exists(self.logs_dirpath):
-			os.mkdir(self.logs_dirpath)
+			self.name = self.ui
 
 	def __str__(self):
 		return 'session: {} | uid: {}'.format(self.name, self.uid)
 
-	def request(self, url, url_paraps, params={}):
+	def request(self, url, url_params, params={}):
 		args = {
 			'endpoint': 		const.ENDPOINTS[self.endpoint],
 			'url':				url

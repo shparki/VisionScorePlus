@@ -1,7 +1,7 @@
 class Spectator(object):
 
 	@classmethod
-	def get_current_match(cls, session, summoner_id, params={}):
+	def get_active_match(cls, session, summoner_id, params={}):
 		pass
 
 	@classmethod

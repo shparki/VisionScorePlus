@@ -18,11 +18,11 @@ class RequestError(InfernalError):
 		self.message = const.REPSONSE_CODES[code]
 
 	def __str__(self):
-		return 'Request Error({}): {}'.format(self.code, self.message)self
+		return 'Request Error({}): {}'.format(self.code, self.message)
 
 
 
-class RateError(InernalError):
+class RateError(InfernalError):
 
 	def __init__(self):
 		pass
