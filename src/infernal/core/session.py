@@ -1,4 +1,4 @@
-from . import constants as const
+from .constants import Constants as const
 from .infernal_error  import RequestError, RateError
 from .utils import default_dict
 
@@ -20,14 +20,14 @@ class RiotAuth(AuthBase):
 		self.api_key = api_key
 
 	def __call__(self, r):
-		r.headers['X-Riot_Token'] = self.api_key
+		r.headers['X-Riot-Token'] = self.api_key
 		return r
 
 
 
 class Session(object):
 
-	def __init__(self, api_key, endpoint, name=None):
+	def __init__(self, api_key, endpoint='na-old', name=None):
 		self.api_key = api_key
 		self.auth = RiotAuth(self.api_key)
 		self.endpoint = 'na-old'
@@ -37,7 +37,7 @@ class Session(object):
 		self.uid = datetime.datetime.today().strftime('%y%m%d_%H%M%S')
 		self.name = name
 		if self.name is None:
-			self.name = self.ui
+			self.name = self.uid
 
 	def __str__(self):
 		return 'session: {} | uid: {}'.format(self.name, self.uid)
@@ -56,6 +56,7 @@ class Session(object):
 			params = params,
 			auth = self.auth
 		)
+		print(req.headers)
 		if str(req.status_code) in const.RESPONSE_CODES.keys():
 			raise RequestError(str(req.status_code))
 
