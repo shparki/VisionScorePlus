@@ -215,7 +215,7 @@ class Constants(object):
 
     URLS_THIRD_PARTY_CODE = {
         # Get third party code for a given summoner ID. (?)
-        'summoner id':              URLS_BASE['third_party_code'] + \
+        'third party code':              URLS_BASE['third_party_code'] + \
                                     '/third-party-code/by-summoner/{summoner_id}'
     }
 
