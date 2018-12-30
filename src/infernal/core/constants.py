@@ -24,6 +24,73 @@ class Constants(object):
         '504':                      'Gateway timeout'
     }
 
+    SEASONS = [
+        'Preseason 3',
+        'Season 3',
+        'Preseason 2014',
+        'Season 2014',
+        'Preseason 2015',
+        'Season 2015',
+        'Preseason 2016',
+        'Season 2016',
+        'Preseason 2017',
+        'Season 2017',
+        'Preseason 2018',
+        'Season 2018'
+    ]
+
+    # Populate the queue, queueId, and gameQueueConfigId fields; not including deprecated queues
+    MATCHMAKING_QUEUES = {
+        '0': {
+            'Map':                  'Custom Games',
+            'Description':          None,
+        },
+        '72': {
+            'Map':                  'Howling Abyss',
+            'Description':          '1v1 Snowdown Showdown games',
+        },
+        '73': {
+            'Map':                  'Howling Abyss',
+            'Description':          '2v2 Snowdown Showdown games',
+        },
+        '75': {
+            'Map':                  'Summoner\'s Rift',
+            'Description':          '6v6 Hexakill games',
+        },
+        '76': {
+            'Map':                  'Summoner\'s Rift',
+            'Description':          'Ultra Rapid Fire games',
+        },
+        '78': {
+            'Map':                  'Howling Abyss',
+            'Description':          'One For All: Mirror Mode games',
+        },
+        '83': {
+            'Map':                  'Summoner\'s Rift',
+            'Description':          'Co-op vs AI Ultra Rapid Fire games',
+        },
+        '98': {
+            'Map':                  'Twisted Treeline',
+            'Description':          '6v6 Hexakill games',
+        },
+        '100': {
+            'Map':                  'Butcher\'s Bridge',
+            'Description':          '5v5 ARAM games',
+        },
+        '310': {
+            'Map':                  'Summoner\'s Rift',
+            'Description':          'Nemesis games',
+        },
+        '313': {
+            'Map':                  'Summoner\'s Rift',
+            'Description':          'Black Market Brawlers games',
+        },
+    }
+
+    # DEPRECATED_QUEUES = {
+
+    # }
+
     ENDPOINTS = {
         # Regional Endpoints
         'br':                       'br1.api.riotgames.com',
@@ -85,7 +152,7 @@ class Constants(object):
 
         #Get the grandmaster league for a given queue
         'grandmaster league':       URLS_BASE['league'] + \
-                                    'grandmasterleagues/by-queue/{queue}',
+                                    '/grandmasterleagues/by-queue/{queue}',
 
         # Get league with given ID, including inactive entries.
         'league':                   URLS_BASE['league'] +  \
