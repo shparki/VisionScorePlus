@@ -7,6 +7,7 @@ import pandas as pd
 class Summoner(object):
 	version = const.VERSIONS['summoner']
 
+
 	@classmethod
 	def get_summoner_by_account_id(cls, session, account_id, params={}):
 		r = None
@@ -29,6 +30,7 @@ class Summoner(object):
 
 		req_table = pd.io.json.json_normalize(r)
 		return req_table
+
 
 	@classmethod
 	def get_summoner_by_name(cls, session, summoner_name, params={}):
@@ -79,7 +81,6 @@ class Summoner(object):
 		req_table = pd.io.json.json_normalize(r)
 		return req_table
 
-		
 
 	@classmethod
 	def get_summoner_by_summoner_id(cls, session, summoner_id, params={}):
