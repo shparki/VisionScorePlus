@@ -142,7 +142,7 @@ class Constants(object):
                                     '/summoners/{summoner_id}',
 
         # get a summoner  by PUUID.
-        'summoner by PUUID':        URLS_BASE['summoner'] + \
+        'summoner by puuid':        URLS_BASE['summoner'] + \
                                     'summoners/by-puuid/{puuid}'
     }
 
