@@ -143,7 +143,7 @@ class Constants(object):
 
         # get a summoner  by PUUID.
         'summoner by puuid':        URLS_BASE['summoner'] + \
-                                    'summoners/by-puuid/{puuid}'
+                                    '/summoners/by-puuid/{puuid}'
     }
 
     URLS_THIRD_PARTY_CODE = {

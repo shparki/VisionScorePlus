@@ -56,6 +56,7 @@ class Session(object):
 			params = params,
 			auth = self.auth
 		)
+
 		if str(req.status_code) in const.RESPONSE_CODES.keys():
 			raise RequestError(str(req.status_code))
 
