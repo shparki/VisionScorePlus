@@ -101,7 +101,7 @@ class League(object):
 				url = const.URLS_LEAGUE['league'],
 				url_params = {
 					'version':			cls.version,
-					'queue':			queue
+					'league_id':		league_id
 				},
 				params = params
 
